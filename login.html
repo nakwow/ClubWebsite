@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lancaster University - Clubs Portal</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- AUTH SCREEN (Login / Sign Up) -->
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card card">
+      <div class="auth-header">
+        <span class="brand-sub">Lancaster University</span>
+        <h2>Clubs Portal</h2>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button id="tabLogin" class="auth-tab active" onclick="switchAuthTab('login')">Log In</button>
+        <button id="tabSignup" class="auth-tab" onclick="switchAuthTab('signup')">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">University Email</label>
+          <input type="email" id="loginEmail" placeholder="e.g. j.doe@lancaster.ac.uk" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Log In</button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signupForm" class="auth-form" style="display: none;">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="e.g. Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">University Email</label>
+          <input type="email" id="signupEmail" placeholder="e.g. j.doe@lancaster.ac.uk" required>
+        </div>
+        <div class="form-group">
+          <label for="signupCollege">College</label>
+          <select id="signupCollege" required>
+            <option value="Bowland College">Bowland College</option>
+            <option value="Cartmel College">Cartmel College</option>
+            <option value="County College">County College</option>
+            <option value="Furness College">Furness College</option>
+            <option value="Fylde College">Fylde College</option>
+            <option value="Grizedale College">Grizedale College</option>
+            <option value="Lonsdale College">Lonsdale College</option>
+            <option value="Pendle College">Pendle College</option>
+            <option value="Graduate College">Graduate College</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN APP CONTAINER -->
+  <div id="appContainer" class="app-layout" style="display: none;">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-sub">Lancaster University</span>
+        <h2>Clubs Portal</h2>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#" class="nav-item active" data-page="dashboard">Dashboard</a>
+        <a href="#" class="nav-item" data-page="calendar">Calendar</a>
+        <a href="#" class="nav-item" data-page="societies">My Societies</a>
+        <a href="#" class="nav-item" data-page="announcements">Announcements</a>
+        <a href="#" class="nav-item" data-page="settings">Settings</a>
+      </nav>
+
+      <div class="user-profile">
+        <div class="avatar" id="userAvatar">JD</div>
+        <div class="user-info">
+          <span class="user-name" id="profileName">Jane Doe</span>
+          <span class="user-role" id="profileCollege">Bowland College</span>
+        </div>
+        <button class="btn-logout" id="logoutBtn" title="Log Out">✕</button>
+      </div>
+    </aside>
+
+    <!-- Main View Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="search-bar">
+          <input type="text" id="globalSearch" placeholder="Search clubs, events, or announcements...">
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-primary" id="openModalBtn">+ Register Event</button>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Injection Point -->
+      <div id="pageContainer" class="page-container">
+        <!-- SPA Content Renders Here -->
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Register Event Modal -->
+  <div id="eventModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Register New Event</h3>
+      <form id="eventForm">
+        <div class="form-group">
+          <label for="eventTitleInput">Event Title</label>
+          <input type="text" id="eventTitleInput" placeholder="e.g., Computer Science Social" required>
+        </div>
+        <div class="form-group">
+          <label for="eventClubInput">Organising Society</label>
+          <select id="eventClubInput" required>
+            <option value="Computer Science Society">Computer Science Society</option>
+            <option value="Rowing Club">Rowing Club</option>
+            <option value="Debating Society">Debating Society</option>
+            <option value="Hiking Society">Hiking Society</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="eventDateInput">Date</label>
+          <input type="date" id="eventDateInput" required>
+        </div>
+        <div class="form-group">
+          <label for="eventLocationInput">Location</label>
+          <input type="text" id="eventLocationInput" placeholder="e.g., InfoLab21" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Create Event</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

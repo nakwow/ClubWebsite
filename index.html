@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lancaster University - Clubs & Societies Portal</title>
+  <link rel="stylesheet" href="index.css">
+ 
+</head>
+
+<body>
+
+  <!-- Navigation Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-sub">Lancaster University</span>
+      <h2>Clubs Portal</h2>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#" class="nav-item active" data-page="dashboard">Dashboard</a>
+      <a href="#" class="nav-item" data-page="calendar">Calendar</a>
+      <a href="#" class="nav-item" data-page="societies">My Societies</a>
+      <a href="#" class="nav-item" data-page="announcements">Announcements</a>
+      <a href="#" class="nav-item" data-page="settings">Settings</a>
+    </nav>
+
+    <div class="user-profile">
+      <div class="avatar" id="userAvatar">JD</div>
+      <div class="user-info">
+        <span class="user-name" id="profileName">Jane Doe</span>
+        <span class="user-role" id="profileCollege">Bowland College</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main View Area -->
+  <main class="main-content">
+    
+    <!-- Header -->
+    <header class="top-header">
+      <div class="search-bar">
+        <input type="text" id="globalSearch" placeholder="Search clubs, events, or announcements...">
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" id="openModalBtn">+ Register Event</button>
+      </div>
+    </header>
+
+    <!-- Dynamic Page Container -->
+    <div id="pageContainer" class="page-container">
+      <!-- Dynamic View JavaScript Injects Content Here -->
+    </div>
+
+  </main>
+
+  <!-- Global Modal for Registering Events -->
+  <div id="eventModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Register New Event</h3>
+      <form id="eventForm">
+        <div class="form-group">
+          <label for="eventTitleInput">Event Title</label>
+          <input type="text" id="eventTitleInput" placeholder="e.g., Computer Science Social" required>
+        </div>
+        <div class="form-group">
+          <label for="eventClubInput">Organising Society</label>
+          <select id="eventClubInput" required>
+            <option value="CS Society">CS Society</option>
+            <option value="Rowing Club">Rowing Club</option>
+            <option value="Debating Society">Debating Society</option>
+            <option value="Hiking Society">Hiking Society</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="eventDateInput">Date</label>
+          <input type="date" id="eventDateInput" required>
+        </div>
+        <div class="form-group">
+          <label for="eventLocationInput">Location</label>
+          <input type="text" id="eventLocationInput" placeholder="e.g., InfoLab21" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Create Event</button>
+      </form>
+    </div>
+  </div>
+
+   <script src="jindex.js"></script>
+</body>
+</html>
