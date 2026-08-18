@@ -26,7 +26,7 @@
       <form id="loginForm" class="auth-form">
         <div class="form-group">
           <label for="loginEmail">University Email</label>
-          <input type="email" id="loginEmail" placeholder="e.g. j.doe@lancaster.ac.uk" required>
+          <input type="email" id="loginEmail" placeholder="e.g. alex@lancaster.ac.uk" required>
         </div>
         <div class="form-group">
           <label for="loginPassword">Password</label>
@@ -39,24 +39,19 @@
       <form id="signupForm" class="auth-form" style="display: none;">
         <div class="form-group">
           <label for="signupName">Full Name</label>
-          <input type="text" id="signupName" placeholder="e.g. Jane Doe" required>
+          <input type="text" id="signupName" placeholder="e.g. Alex Smith" required>
         </div>
         <div class="form-group">
           <label for="signupEmail">University Email</label>
-          <input type="email" id="signupEmail" placeholder="e.g. j.doe@lancaster.ac.uk" required>
+          <input type="email" id="signupEmail" placeholder="e.g. alex@lancaster.ac.uk" required>
         </div>
         <div class="form-group">
-          <label for="signupCollege">College</label>
+          <label for="signupCollege">Affiliation / College</label>
           <select id="signupCollege" required>
-            <option value="Bowland College">Bowland College</option>
-            <option value="Cartmel College">Cartmel College</option>
-            <option value="County College">County College</option>
-            <option value="Furness College">Furness College</option>
-            <option value="Fylde College">Fylde College</option>
-            <option value="Grizedale College">Grizedale College</option>
-            <option value="Lonsdale College">Lonsdale College</option>
-            <option value="Pendle College">Pendle College</option>
-            <option value="Graduate College">Graduate College</option>
+            <option value="Lancaster University Main Campus">Lancaster University Main Campus</option>
+            <option value="Bailrigg Student">Bailrigg Student</option>
+            <option value="Postgraduate & Research">Postgraduate & Research</option>
+            <option value="Staff / Faculty">Staff / Faculty</option>
           </select>
         </div>
         <div class="form-group">
@@ -87,10 +82,10 @@
       </nav>
 
       <div class="user-profile">
-        <div class="avatar" id="userAvatar">JD</div>
+        <div class="avatar" id="userAvatar">LU</div>
         <div class="user-info">
-          <span class="user-name" id="profileName">Jane Doe</span>
-          <span class="user-role" id="profileCollege">Bowland College</span>
+          <span class="user-name" id="profileName">Student Name</span>
+          <span class="user-role" id="profileCollege">Lancaster University</span>
         </div>
         <button class="btn-logout" id="logoutBtn" title="Log Out">✕</button>
       </div>
@@ -98,8 +93,6 @@
 
     <!-- Main View Area -->
     <main class="main-content">
-      
-      <!-- Top Header -->
       <header class="top-header">
         <div class="search-bar">
           <input type="text" id="globalSearch" placeholder="Search clubs, events, or announcements...">
@@ -109,11 +102,9 @@
         </div>
       </header>
 
-      <!-- Dynamic Content Injection Point -->
       <div id="pageContainer" class="page-container">
-        <!-- SPA Content Renders Here -->
+        <!-- SPA Content -->
       </div>
-
     </main>
 
   </div>
@@ -126,7 +117,7 @@
       <form id="eventForm">
         <div class="form-group">
           <label for="eventTitleInput">Event Title</label>
-          <input type="text" id="eventTitleInput" placeholder="e.g., Computer Science Social" required>
+          <input type="text" id="eventTitleInput" placeholder="e.g., Campus Coding Night" required>
         </div>
         <div class="form-group">
           <label for="eventClubInput">Organising Society</label>
@@ -143,7 +134,7 @@
         </div>
         <div class="form-group">
           <label for="eventLocationInput">Location</label>
-          <input type="text" id="eventLocationInput" placeholder="e.g., InfoLab21" required>
+          <input type="text" id="eventLocationInput" placeholder="e.g., Great Hall" required>
         </div>
         <button type="submit" class="btn btn-primary btn-full">Create Event</button>
       </form>
