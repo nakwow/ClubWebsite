@@ -1,0 +1,3 @@
+-- database: c:\Users\nknsa\OneDrive\Desktop\Weeknd\LancasterClubsPortal\LancasterClubsPortal\clubs.db
+
+SELECT * FROM announcements;

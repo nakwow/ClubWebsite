@@ -1,0 +1,4 @@
+node_modules/
+clubs.db
+clubs.db-shm
+clubs.db-wal
